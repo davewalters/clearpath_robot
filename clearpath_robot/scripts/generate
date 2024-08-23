@@ -2,17 +2,17 @@
 source /opt/ros/humble/setup.bash
 
 # Generate and source setup.bash
-ros2 run clearpath_generator_common generate_bash
-source /etc/clearpath/setup.bash
+ros2 run clearpath_generator_common generate_bash --setup_path $HOME/ros2_ws_localisation/clearpath
+source $HOME/ros2_ws_localisation/clearpath/setup.bash
 
 # Generate discovery server start file
-ros2 run clearpath_generator_common generate_discovery_server
+ros2 run clearpath_generator_common generate_discovery_server --setup_path $HOME/ros2_ws_localisation/clearpath
 
 # Generate description
-ros2 run clearpath_generator_common generate_description
+ros2 run clearpath_generator_common generate_description --setup_path $HOME/ros2_ws_localisation/clearpath
 
 # Generate parameters
-ros2 run clearpath_generator_robot generate_param
+ros2 run clearpath_generator_robot generate_param --setup_path $HOME/ros2_ws_localisation/clearpath
 
 # Generate launch files
-ros2 run clearpath_generator_robot generate_launch
+ros2 run clearpath_generator_robot generate_launch --setup_path $HOME/ros2_ws_localisation/clearpath
