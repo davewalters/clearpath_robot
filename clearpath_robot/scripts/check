@@ -1,5 +1,5 @@
 #!/bin/bash
-filename="/etc/clearpath/robot.yaml"
+filename="$HOME/ros2_ws_localisation/clearpath/robot.yaml"
 
 m1=$(md5sum "$filename")
 

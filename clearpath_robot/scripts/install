@@ -142,7 +142,7 @@ class RobotProvider(robot_upstart.providers.Generic):
                 # Replace User with username from config
                 if 'User=' in line:
                     line = 'User={0}\n'.format(clearpath_config.system.username)
-                robot_service_contents += line
+                robot_service_contents += line               
         with open(robot_service_execpre_contents_path) as f:
             robot_service_execpre_contents = f.read()
         with open(robot_service_exec_contents_path) as f:
