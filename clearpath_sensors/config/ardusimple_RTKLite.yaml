@@ -1,8 +1,5 @@
 ublox_gps_node:
   ros__parameters: 
-    debug: 0
-    uart1:
-      baudrate: 460800
     gnss:
       glonass: false
       beidou: false
@@ -10,17 +7,3 @@ ublox_gps_node:
       qzss: false
       galileo: false
       imes: false
-    tmode3: 1                   
-    sv_in:
-      reset: True                                      
-      min_dur: 300              
-      acc_lim: 3.0             
-    inf:
-      all: true                
-    publish:
-      all: false
-      nav:
-        all: true
-        relposned: true
-        posllh: true
-        posecef: true
