@@ -1,9 +1,20 @@
 ublox_gps_node:
-  ros__parameters: 
-    gnss:
-      glonass: false
-      beidou: false
-      gps: true
-      qzss: false
-      galileo: false
-      imes: false
+  ros__parameters:
+    device: "/dev/gps0_ftdi"
+    uart1:
+      baudrate: 38400         
+    frame_id: "gps_0_link"
+    rate: 4.0
+    dynamic_model: "portable"
+    enable_ppp: false
+    tmode3: 0
+    sv_in:
+      reset: true
+      min_dur: 300
+      acc_lim: 3.0
+    inf:
+      all: true
+    publish:
+      all: false
+      nav:
+        all: true
