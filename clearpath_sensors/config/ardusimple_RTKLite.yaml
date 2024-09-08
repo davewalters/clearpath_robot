@@ -1,11 +1,11 @@
 ublox_gps_node:
   ros__parameters:
-    device: "/dev/gps0_ftdi"
+    frame_id: 'gps_0_link'
+    device: '/dev/gps0_ftdi'
     uart1:
-      baudrate: 38400         
-    frame_id: "gps_0_link"
-    rate: 4.0
-    dynamic_model: "portable"
+      baudrate: 38400
+    rate: 4.0         
+    dynamic_model: 'portable'
     enable_ppp: false
     tmode3: 0
     sv_in:
